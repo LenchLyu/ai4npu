@@ -1,0 +1,20 @@
+# Publish only reviewed sources and data; Vivado's live project and caches stay local.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+!/rtl/
+!/sim/
+!/data/
+!/model/
+!/software/
+!/tools/
+!/RevisionControl/
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+model/data/
+.Xil/
+*.jou
+*.log

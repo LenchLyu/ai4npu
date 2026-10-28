@@ -1,0 +1,74 @@
+{
+  "input_shape": [
+    1,
+    28,
+    28
+  ],
+  "input_scale": 0.015625,
+  "input_layout": "NCHW; channel-row-column order",
+  "conv_weight_layout": "OIHW; each 3x3 kernel is row-major",
+  "fc_weight_layout": "class-major; input features use channel-row-column order",
+  "rounding": "nearest_even",
+  "activation_range": [
+    0,
+    127
+  ],
+  "layers": {
+    "conv1": {
+      "weight_shape": [
+        4,
+        1,
+        3,
+        3
+      ],
+      "input_scale": 0.015625,
+      "weight_scale": 0.015625,
+      "bias_scale": 0.000244140625,
+      "output_scale": 0.0625,
+      "output_shift": 8,
+      "accumulator_abs_bound": 49023
+    },
+    "conv2": {
+      "weight_shape": [
+        8,
+        4,
+        3,
+        3
+      ],
+      "input_scale": 0.0625,
+      "weight_scale": 0.015625,
+      "bias_scale": 0.0009765625,
+      "output_scale": 0.125,
+      "output_shift": 7,
+      "accumulator_abs_bound": 83256
+    },
+    "fc": {
+      "weight_shape": [
+        10,
+        200
+      ],
+      "input_scale": 0.125,
+      "weight_scale": 0.0078125,
+      "bias_scale": 0.0009765625,
+      "output_scale": 0.0009765625,
+      "output_shift": null,
+      "accumulator_abs_bound": 383812
+    }
+  },
+  "golden_sample": {
+    "label": 7,
+    "prediction": 7,
+    "logits_int32": [
+      -3830,
+      -10155,
+      -611,
+      -949,
+      -14865,
+      -6550,
+      -23745,
+      12564,
+      -4440,
+      -1124
+    ]
+  }
+}

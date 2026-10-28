@@ -1,0 +1,45 @@
+{
+  "fp32_validation_accuracy": 0.9776,
+  "int8_validation_accuracy": 0.9778,
+  "validation_samples": 5000,
+  "validation_drop_pp": -0.019999999999997797,
+  "validation_pass": true,
+  "fp32_test_accuracy": 0.9818,
+  "int8_test_accuracy": 0.9818,
+  "test_drop_pp": 0.0,
+  "test_pass": true,
+  "max_drop_pp": 1.0,
+  "min_test_accuracy": 0.96,
+  "overall_pass": true,
+  "test_samples": 10000,
+  "weight_count": 2324,
+  "bias_count": 22,
+  "raw_parameter_bytes": 2412,
+  "scales_and_shifts": {
+    "conv1": {
+      "input_scale": 0.015625,
+      "weight_scale": 0.015625,
+      "accumulator_scale": 0.000244140625,
+      "output_scale": 0.0625,
+      "output_shift": 8,
+      "accumulator_abs_bound": 49023
+    },
+    "conv2": {
+      "input_scale": 0.0625,
+      "weight_scale": 0.015625,
+      "accumulator_scale": 0.0009765625,
+      "output_scale": 0.125,
+      "output_shift": 7,
+      "accumulator_abs_bound": 83256
+    },
+    "fc": {
+      "input_scale": 0.125,
+      "weight_scale": 0.0078125,
+      "accumulator_scale": 0.0009765625,
+      "output_scale": 0.0009765625,
+      "output_shift": null,
+      "accumulator_abs_bound": 383812
+    }
+  },
+  "checkpoint_file_bytes": 5719
+}

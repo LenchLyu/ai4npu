@@ -1,0 +1,11 @@
+.Xil/
+*.jou
+*.log
+vivado*.backup.*
+ai4npu.cache/
+ai4npu.gen/
+ai4npu.hw/
+ai4npu.ip_user_files/
+ai4npu.runs/
+ai4npu.sim/
+ai4npu.srcs/
